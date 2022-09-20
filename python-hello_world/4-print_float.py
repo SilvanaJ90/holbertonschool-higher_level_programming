@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 0.00000
-print(f"Float: {round(number):.2f}")
+number = 3.14159
+print(f"Float: {round(number, 2):.2f}")
