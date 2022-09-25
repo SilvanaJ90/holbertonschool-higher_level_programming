@@ -1,3 +1,6 @@
  #!/usr/bin/python3
-import imp
-my_module = imp.load_compiled("my_module", "full_path_to_my_module/my_module.pyc")
+import hidden_4
+if __name__ == "__main__":
+    for i in dir(hidden_4):
+        if not i.startswith('__'):
+            print(i)
