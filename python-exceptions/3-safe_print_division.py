@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+from unittest import result
+
+
 def safe_print_division(a, b):
     try:
         div = a / b
@@ -6,4 +9,5 @@ def safe_print_division(a, b):
         print("Inside result: None")
     finally:
         print("Inside result: {}".format(div))
+        return div
   
