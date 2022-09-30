@@ -10,5 +10,3 @@ def safe_print_division(a, b):
         else:
             print("Inside result: {}".format(resul))
             return resul
-        
-      
