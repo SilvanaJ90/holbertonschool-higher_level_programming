@@ -1,5 +1,5 @@
 #!/usr/bin/python3
+""" Clase """
 class Square:
     pass
 
-heigth = Square()  # Create an empty employee record
