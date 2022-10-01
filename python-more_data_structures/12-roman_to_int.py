@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    roman_string = {"X": 10, "VII": 10, "IX": 10, "LXXXVII": 10, "DCCVII": 10}
-    for key, value in roman_string.items():
-        while key != None:
-            return roman_string.replace(key, value)
+    dic_r = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    acum = 0
+    if not roman_string or type(roman_string) != str:
+        return 0
+    romano = list(roman_string)
+    for i in range(len(roman_string)):
+        if i > 0 and dic_r[romano[i]] > dic_r[romano[i - 1]]:
+            acum += dic_r[romano[i]] - 2 * dic_r[romano[i - 1]]
+        else:
+            acum += dic_r[romano[i]]
+    return acum
