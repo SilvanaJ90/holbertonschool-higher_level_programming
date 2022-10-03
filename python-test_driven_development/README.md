@@ -10,4 +10,4 @@ Read or watch:
     [doctest – Testing through documentation](https://pymotw.com/3/doctest/)
     [Unit Tests in Python](https://intranet.hbtn.io/rltoken/LhbdUZYzqiP7cjxjE3rG3w).
 
-    This site was built using [GitHub Pages](https://pages.github.com/).
+    This site was built using [GitHub Pages]https://pages.github.com/
