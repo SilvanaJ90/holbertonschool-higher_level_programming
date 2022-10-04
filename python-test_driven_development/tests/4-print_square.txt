@@ -18,5 +18,14 @@ Write a function that prints a square with the character #.
 
 Now use it:
 
+>>> print_square(4)
+####
+####
+####
+####
+
+
+
 
 Error ouput
+l
