@@ -10,35 +10,24 @@ Write a function that prints My name is <first name> <last name>
     first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
     You are not allowed to import any module
 
-    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Now use it:
-    >>> print(add_integer(1, 2))
-    3
+    >>> say_my_name("John", "Smith")
+    My name is John Smith$
 
-    >>> print(add_integer(100, -2))
-    98
+    say_my_name("Walter", "White")
+    My name is Walter White$
 
     >>> print(add_integer(2))
-    100
+    My name is Bob $
 
-    >>> print(add_integer(100.3, -2))
-    98
+    >>> say_my_name("Bob")
+    My name is Bob $
+    
 
 
 Error ouput
-    >>> print(add_integer(4, "School"))
+    >>> say_my_name(12, "White")
     Traceback (most recent call last):
-    TypeError: b must be an integer
-
-    >>> print(add_integer(None))
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-
-    >>> add_integer(float('nan'))
-    Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
-
-    >>> add_integer(1000e1000)
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
+    TypeError: first_name must be a string$
