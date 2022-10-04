@@ -8,22 +8,19 @@ The 2-matrix_divided module is function that divides all elements.
 
 def matrix_divided(matrix, div):
     """ Return new matriz with the division of elelments """
-    if type(div) is not int and type(div) is not float:
-        raise TypeError("div must be a number")
+    nw_matrix = []
+    for fila in matrix:
+        if all(isinstance(x, (int, float)) for x in fila) is False:
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(isinstance(fila, (list)) for fila in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    if type(matrix) is not list or (len(matrix) == 0) or type(matrix[0]) is not list or (len(matrix[0]) == 0):
-        raise TypeError("matrix must be a matrix (list of lists) of \
-integers/floats")
-    for row in matrix:
-        if type(row) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of \
-integers/floats")
-        if len(row) != len(matrix[0]):
+    if type(div) != int and type(div) != float:
+        raise TypeError("div must be a number")
+    for fila in matrix:
+        if len(matrix[0]) != len(fila):
             raise TypeError("Each row of the matrix must have the same size")
-        for c in row:
-            if type(c) is not int and type(c) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) of \
-integers/floats")
-
-    return [[round(item / div, 2) for item in row] for row in matrix]
+    for i in matrix:
+        nw_matrix.append(list(map(lambda x: round(x/div, 2), i)))
+    return nw_matrix
