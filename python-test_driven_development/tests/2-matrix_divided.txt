@@ -35,6 +35,9 @@ Now use it:
 
 Error ouput
 
+    >>> matrix_divided([[0, 0, 0], [0, 0, 0]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
 
     >>> matrix_divided(["hello", "Mundo"], 3)
     Traceback (most recent call last):
