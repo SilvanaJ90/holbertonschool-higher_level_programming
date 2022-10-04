@@ -11,23 +11,19 @@ Write a function that prints a text with 2 new lines after each of these charact
     There should be no space at the beginning or at the end of each printed line
     You are not allowed to import any module
 
-
-
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Now use it:
-    >>> print_square(4)
-    ####
-    ####
-    ####
-    ####
 
-    >>> print_square(0)
-    
+    >>> text_indentation('Lorem ipsum: dolor sit? amet')
+    Lorem ipsum:
+    <BLANKLINE>
+    dolor sit?
+    <BLANKLINE>
+    amet
 
-Error ouput:
+Error ouput
 
-    >>> print_square(5.5)
+    >>> text_indentation(842)
     Traceback (most recent call last):
-    TypeError: size must be an integer
-
+    TypeError: text must be a string
