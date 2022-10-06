@@ -5,10 +5,13 @@
 class Rectangle:
     """ create rectangle """
 
-    def __init__(self, width=0, height=0, perimeter=0):
-        self.__width = width
-        self.__height = height
-        self.perimeter = perimeter
+    def __init__(self, width=0, height=0):
+        self.height = height
+        self.width = width
+
+    @property
+    def height(self):
+        return self.__height
 
     @property
     def width(self):
@@ -22,10 +25,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = width
 
-    @property
-    def height(self):
-        return self.height
-
     @height.setter
     def height(self, height):
         if type(height) is not int:
@@ -38,8 +37,9 @@ class Rectangle:
         return (self.__width * self.__height)
 
     def perimeter(self):
-        return self.perimeter
-
-    def perimeter.setter(self,perimeter):
-        if width or height == 0:
+        if self.__width == 0 or self.__height == 0:
             perimeter = 0
+        else:
+            perimeter =  2*(self.__width + self.__height)
+        return perimeter
+
