@@ -2,12 +2,19 @@
 """ This is empty class """
 
 
+from curses.textpad import rectangle
+import numbers
+
+
 class Rectangle:
     """ create rectangle """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -53,4 +60,5 @@ class Rectangle:
             eval(str(self.__width)), eval(str(self.__height)))
 
     def __del__(self):
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
