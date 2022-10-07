@@ -2,10 +2,6 @@
 """ This is empty class """
 
 
-from curses.textpad import rectangle
-import numbers
-
-
 class Rectangle:
     """ create rectangle """
 
