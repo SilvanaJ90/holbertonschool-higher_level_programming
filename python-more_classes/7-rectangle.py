@@ -2,9 +2,6 @@
 """ This is empty class """
 
 
-from re import S
-
-
 class Rectangle:
     """ create rectangle """
 
