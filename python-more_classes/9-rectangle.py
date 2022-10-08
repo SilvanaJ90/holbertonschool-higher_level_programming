@@ -76,5 +76,5 @@ class Rectangle:
     def square(cls, size = 0):
         return cls(size, size)
         
-        square = Rectangle.new_square(5)
-        print(square.calculate_area())
+        square = Rectangle.new_square()
+        return width == height == size
