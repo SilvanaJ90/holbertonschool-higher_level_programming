@@ -71,7 +71,10 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-            
+
     @classmethod
     def square(cls, size = 0):
         return cls(size, size)
+        
+        square = Rectangle.new_square(5)
+        print(square.calculate_area())
