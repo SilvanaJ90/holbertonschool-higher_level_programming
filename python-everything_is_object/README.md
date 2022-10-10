@@ -7,23 +7,23 @@ Now that we understand that everything is an object and have a little bit of kno
 
 BTW, have you ever modified a variable without knowing it or wanting to? I mean:
 
->>> a = 1
->>> b = a
->>> a = 2
->>> b
+a = 1
+b = a
+a = 2
+b
 1
->>> 
+
 
 OK. But what about this?
 
->>> l = [1, 2, 3]
->>> m = l
->>> l[0] = 'x'
->>> m
+l = [1, 2, 3]
+m = l
+l[0] = 'x'
+m
 ['x', 2, 3]
->>> 
+ 
 
-![This is an image](https://giphy.com/gifs/batman-look-whoa-wAjfQ9MLUfFjq)
+![This is an image](https://media0.giphy.com/media/wAjfQ9MLUfFjq/giphy.gif?cid=790b7611b89356fc7f262199ae36328e225e47e7e796bcc2&rid=giphy.gif&ct=g))
 
 
 This project is a little bit different than the usual projects. The first part is only questions about Python’s specificity like “What would be the result of…”. You should read all documentation first (as usual :)), then take the time to think and brainstorm with your peers about what you think and why. Try to do this without coding anything for a few hours.
