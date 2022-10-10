@@ -7,7 +7,7 @@ Now that we understand that everything is an object and have a little bit of kno
 
 BTW, have you ever modified a variable without knowing it or wanting to? I mean:
 
->>> a = 1 >>>
+> a = 1
 > b = a
 > a = 2 >>>
 > b >>>
@@ -16,11 +16,11 @@ BTW, have you ever modified a variable without knowing it or wanting to? I mean:
 
 OK. But what about this?
 
-l = [1, 2, 3]
-m = l
-l[0] = 'x'
-m
-['x', 2, 3]
+> l = [1, 2, 3]
+> m = l
+> l[0] = 'x'
+> m
+> ['x', 2, 3]
  
 
 ![This is an image](https://media0.giphy.com/media/wAjfQ9MLUfFjq/giphy.gif?cid=790b7611b89356fc7f262199ae36328e225e47e7e796bcc2&rid=giphy.gif&ct=g))
