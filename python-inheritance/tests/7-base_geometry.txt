@@ -56,7 +56,7 @@ Write a class BaseGeometry (based on 6-base_geometry.py).
 
     >>> bg.integer_validator("age")
     Traceback (most recent call last):
-    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+    TypeError: bg.integer_validator() missing 1 required positional argument: 'value'
 
 
 
