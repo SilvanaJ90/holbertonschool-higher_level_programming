@@ -29,6 +29,7 @@ class Rectangle(BaseGeometry):
             raise ValueError("{} must be greater than 0".format(name))
         if self.__width  <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+        print(issubclass(Rectangle, BaseGeometry))
   
 
 
