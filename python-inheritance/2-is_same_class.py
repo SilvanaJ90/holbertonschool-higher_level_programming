@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from inspect import CO_ASYNC_GENERATOR
 
 
 def is_same_class(obj, a_class):
