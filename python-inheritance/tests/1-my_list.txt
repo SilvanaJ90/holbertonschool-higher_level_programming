@@ -50,11 +50,4 @@ Now use it:
     >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
 
-Error ouput
-    >>> my_list = MyList()
-    >>> my_list.append()
-    >>> print(my_list)
-    Traceback (most recent call last):
-    TypeError: list.append() takes exactly one argument (0 given)
-
 
