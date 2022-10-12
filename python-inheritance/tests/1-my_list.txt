@@ -50,4 +50,10 @@ Now use it:
     >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
 
+    >>> my_list = MyList()
+    
+
+    
+
+
 
