@@ -36,7 +36,7 @@ Error
 
     >>> bg.integer_validator("age", None)
     Traceback (most recent call last):
-    NameError: name 'bg' is no...
+    NameError: name 'bg' is not defined
     
 
     
