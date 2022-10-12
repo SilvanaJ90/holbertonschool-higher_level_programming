@@ -2,9 +2,6 @@
 """ Doc """
 
 
-import pstats
-
-
 class BaseGeometry:
     """ empty class """
     def __init__(self, width, height):
