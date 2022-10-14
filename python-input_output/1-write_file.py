@@ -6,5 +6,5 @@ Doc
 
 def write_file(filename="", text=""):
     """ Doc """
-    with open("my_first_file.txt", mode="w", encoding="utf-8") as filename:
-        return filename.write(text)
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
