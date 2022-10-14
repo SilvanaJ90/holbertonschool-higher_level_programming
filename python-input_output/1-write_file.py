@@ -4,9 +4,6 @@ Doc
 """
 
 
-import re
-
-
 def write_file(filename="", text=""):
     """ Doc """
     text = "This School is so cool!\n"
