@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Write a script that adds all arguments to a Python list """
+""" Write a script that adds all arguments to a Python list. """
 
 
 from sys import argv
