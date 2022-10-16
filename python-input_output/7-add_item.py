@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-""" Doc """
+""" Script that adds all arguments to a Python list """
 
 
-import sys
-import json
+from sys import argv
+
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
-args = sys.argv
 filename = "add_item.json"
-with open(filename, 'a+', encoding="utf-8") as f:
+try:
+    my_list = load_from_json_file(filename)
+except:
     my_list = []
-    my_list.append(args[1:])
-    save_to_json_file(my_list, filename)
-    load_from_json_file(filename)
+
+for arg in argv[1:]:
+    my_list.append(arg)
+save_to_json_file(my_list, filename)
