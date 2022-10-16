@@ -10,12 +10,13 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
+        """ Doc """
         if attrs is None:
             return self.__dict__
-        new_list = {}
+        new_dict = {}
         for i in attrs:
             try:
-                new_list[i] = self.__dict__[i]
+                new_dict[i] = self.__dict__[i]
             except:
                 pass
-            return new_list
+        return new_dict
