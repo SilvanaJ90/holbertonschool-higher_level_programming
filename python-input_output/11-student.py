@@ -2,6 +2,9 @@
 """ Class Student """
 
 
+import json
+
+
 class Student:
     """ Doc """
     def __init__(self, first_name, last_name, age):
@@ -21,3 +24,6 @@ class Student:
                 pass
         return new_dict
 
+    def reload_from_json(self, json):
+        """ replace instance """
+        self.__dict__.update(json)
