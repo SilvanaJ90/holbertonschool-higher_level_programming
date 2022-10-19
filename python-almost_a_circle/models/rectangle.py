@@ -2,7 +2,6 @@
 """ class Rectangle, inherits Base"""
 
 
-from urllib3 import Retry
 from models.base import Base
 
 
