@@ -9,7 +9,7 @@ class Base:
 
     __nb_objects = 0
 
-    def __init__(self, width, height, x=0, y=0, id=None): 
+    def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
         self.x = x
@@ -19,6 +19,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
 
 class Rectangle(Base):
     """ Doc """
@@ -34,7 +35,7 @@ class Rectangle(Base):
     @property
     def x(self):
         return self.__x
-    
+
     @property
     def y(self):
         return self.__y
@@ -58,7 +59,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         self.__x = x
-    
+
     @y.setter
     def y(self, y):
         self.__y = y
