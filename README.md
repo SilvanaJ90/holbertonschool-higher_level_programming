@@ -12,3 +12,5 @@ Like C, Python also has a linter / style guide like Betty, called PEP8, also now
 Enjoy!
 
 - Guillaume
+
+This site was built using [0x00-python-hello_world](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x00-python-hello_world).
