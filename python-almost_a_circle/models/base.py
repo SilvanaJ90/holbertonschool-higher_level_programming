@@ -6,7 +6,7 @@ class base
 __nb_objects = 0
 
 
-class base:
+class Base:
     """ Doc """
     def __init__(self, id=None):
         if id is not None:
