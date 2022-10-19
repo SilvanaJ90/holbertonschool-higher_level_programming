@@ -24,9 +24,6 @@ You will also learn about:
     JSON
 
 
-![This is an image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/331/giphy.mp4)
-## Learning Objectives
-
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 General
 
