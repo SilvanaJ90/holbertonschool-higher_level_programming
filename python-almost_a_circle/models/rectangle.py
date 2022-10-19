@@ -70,7 +70,9 @@ class Rectangle(Base):
         """ Display Rectangle """
         width = self.__width
         height = self.__height
+        print("\n" * self.__y, end="")
         for height in range(self.__height):
+            print(self.__x * " ", end="")
             for width in range(self.__width):
                 print('#', end='')
             print()
