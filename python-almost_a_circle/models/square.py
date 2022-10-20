@@ -3,6 +3,7 @@
 Class Square inhere Rectangle
 """
 
+
 from models.rectangle import Base, Rectangle
 
 
@@ -13,4 +14,15 @@ class Square(Rectangle):
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
+            self.id, self.x, self.y, self.width)    
+    
+    @property
+    def size(self):
+        """ getter size"""
+        return super().width
+
+    @size.setter
+    def size(self, size):
+        """ setter size """
+        self.width = size
+        self.height = size
