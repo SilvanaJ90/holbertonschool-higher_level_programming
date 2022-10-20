@@ -2,7 +2,6 @@
 """ class Rectangle, inherits Base"""
 
 
-from turtle import width
 from models.base import Base
 
 
