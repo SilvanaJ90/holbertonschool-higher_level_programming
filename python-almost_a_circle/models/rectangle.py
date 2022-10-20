@@ -83,6 +83,7 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height)
     
     def update(self, *args):
+        """ args argument """
         if len(args) > 0:
             if args[0] is not None:
                 self.id = args[0]
