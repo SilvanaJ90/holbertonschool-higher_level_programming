@@ -81,7 +81,7 @@ class Rectangle(Base):
         """ method str """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
-    
+
     def update(self, *args):
         """ args argument """
         if len(args) > 0:
