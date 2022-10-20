@@ -4,7 +4,6 @@ Class Square inhere Rectangle
 """
 
 
-from curses import KEY_A1
 from models.rectangle import Base, Rectangle
 
 
