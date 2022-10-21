@@ -6,7 +6,6 @@ class base
 import json
 
 
-
 class Base:
     """ Doc """
 
