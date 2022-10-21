@@ -6,6 +6,7 @@ class base
 import json
 
 
+
 class Base:
     """ Doc """
 
@@ -27,15 +28,9 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """writes the JSON string representation of list_objs """
-        filename = type(list_objs[0]).__name__ + ".json"
-        json_file = open(filename, "w")
-        if list_objs is None:
-            json.dump([], json_file)
-
-        if type(list_objs[0]).__name__ == "Rectangle":
-            new_dict = [item.to_dictionary() for item in list_objs]
-            json_string = cls.to_json_string(new_dict)
-            json.dump(new_dict, json_file)
-
-        json_file.close()
+        """writes the JSON string representation"""
+        if list_objs is not None:
+            list_objs = [n.to_dictionary() for n in list_objs]
+        filename = cls.__name__ + ".json"
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(cls.to_json_string(list_objs))
