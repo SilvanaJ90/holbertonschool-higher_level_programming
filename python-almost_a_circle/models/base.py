@@ -6,7 +6,6 @@ class base
 import json
 
 
-
 class Base:
     """ Doc """
 
@@ -44,12 +43,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
-            dummy = cls(1,1)
+            dummy = cls(1, 1)
         elif cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
-        
-
-
-        
