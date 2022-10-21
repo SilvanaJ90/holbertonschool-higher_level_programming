@@ -28,7 +28,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs """
-        filename = type(list_objs[0]).__name__ + "Rectangle.json"
+        filename = type(list_objs[0]).__name__ + ".json"
         json_file = open(filename, "w")
         if list_objs is None:
             json.dump([], json_file)
