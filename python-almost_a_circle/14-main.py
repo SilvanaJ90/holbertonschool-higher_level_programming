@@ -1,4 +1,3 @@
-guillaume@ubuntu:~/$ cat 14-main.py
 #!/usr/bin/python3
 """ 14-main """
 from models.base import Base
