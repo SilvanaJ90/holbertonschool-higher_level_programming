@@ -19,7 +19,9 @@ class TestBase(unittest.TestCase):
         b2 = Base(89)
         self.assertEquals(b2.id, 89)
 
-
+    """ Test of Base.to_json_string(None) exists """
+    def test_base_to_json_string_none(self):
+        self.assertIsNotNone(Base.to_json_string)
 
 if __name__ == '__main__':
     unittest.main()
