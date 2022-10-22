@@ -30,10 +30,6 @@ class TestBase(unittest.TestCase):
         test = Base.to_json_string(None)
         self.assertEqual(test, '[]')
 
-    """ Test of Base.to_json_string([ { 'id': 12 }]) """
-    def test_base_to_json_strin_id(self):
-        test = Base.to_json_string([{'id': 12}])
-        self.assertEqual(test, '[{"id": 12}]')
 
     """ Test of Base.to_json_string([ { 'id': 12 }]) returning a string """
 
