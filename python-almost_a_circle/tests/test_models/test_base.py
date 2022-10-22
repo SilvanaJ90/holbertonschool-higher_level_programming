@@ -23,5 +23,28 @@ class TestBase(unittest.TestCase):
     def test_base_to_json_string_none(self):
         self.assertIsNotNone(Base.to_json_string)
 
+    """ Test of Base() for assigning automatically an ID + 1 of the previous exists """
+
+    """  Test of Base.to_json_string([]) exists """
+    def test_base_to_json_strin_empty(self):
+        test = Base.to_json_string(None)
+        self.assertEqual(test, '[]')
+
+    """ Test of Base.to_json_string([ { 'id': 12 }]) """
+    def test_base_to_json_strin_id(self):
+        test = Base.to_json_string([{'id': 12}])
+        self.assertEqual(test, '[{"id": 12}]')
+
+    """ Test of Base.to_json_string([ { 'id': 12 }]) returning a string """
+
+    """ Test of Base.from_json_string(None) """
+
+    """ Test of Base.from_json_string("[]") """
+
+    """ Test of Base.from_json_string('[{ "id": 89 }]') """
+
+    """ Test of Base.from_json_string('[{ "id": 89 }]') returning a list """
+
+
 if __name__ == '__main__':
     unittest.main()
