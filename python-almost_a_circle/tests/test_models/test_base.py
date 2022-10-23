@@ -39,8 +39,8 @@ class TestBase(unittest.TestCase):
 
 
     """  Test of Base.to_json_string([]) exists """
-    def test_base_to_json_strin_empty(self):
-        test = Base.to_json_string(None)
+    def test_base_from_json_strin_empty(self):
+        test = Base.from_json_string(None)
         self.assertEqual(test, [])
 
 
