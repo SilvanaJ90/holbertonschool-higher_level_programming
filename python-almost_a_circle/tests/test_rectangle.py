@@ -18,11 +18,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.height, 2)
 
 
-    """ Test of Rectangle(1, 2, 3) exists """
-
-    """ Test of Rectangle(1, 2, 3, 4) exists """
-
     """ Test of Rectangle("1", 2) exists """
+    def test_tectangle_string(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle("1", 2)
+
 
     """ Test of Rectangle(1, "2") exists """
 
