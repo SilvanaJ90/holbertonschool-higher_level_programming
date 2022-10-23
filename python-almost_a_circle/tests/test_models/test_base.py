@@ -12,7 +12,6 @@ class TestBase(unittest.TestCase):
     def test_base(self):
         b1 = Base()
         self.assertEquals(b1.id, 1)
-    """ Test of Base() for assigning automatically an ID + 1 of the previous """
 
     """ Test of Base(89) saving the ID passed """
     def test_base_saving(self):

@@ -12,7 +12,6 @@ class TestBase(unittest.TestCase):
     def test_base(self):
         b1 = Base()
         self.assertEquals(b1.id, 1)
-    """ Test of Base() for assigning automatically an ID + 1 of the previous """
 
     """ Test of Base(89) saving the ID passed """
     def test_base_saving(self):
@@ -39,8 +38,8 @@ class TestBase(unittest.TestCase):
 
 
     """  Test of Base.to_json_string([]) exists """
-    def test_base_to_json_strin_empty(self):
-        test = Base.to_json_string(None)
+    def test_base_from_json_strin_empty(self):
+        test = Base.from_json_string(None)
         self.assertEqual(test, [])
 
 
