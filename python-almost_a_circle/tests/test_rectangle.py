@@ -40,6 +40,13 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 2, 3, "4")
 
     """ Test of Rectangle(1, 2, 3, 4, 5) exists """
+    def test_tectangle_area(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(r.width, 1)
+        self.assertEqual(r.height, 2)
+        self.assertEquals(r.x, 3)
+        self.assertEqual(r.y, 4)
+        self.assertEqual(r.id, 5)
 
     """ Test of Rectangle(-1, 2) exists """
 
