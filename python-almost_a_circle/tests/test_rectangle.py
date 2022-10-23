@@ -4,7 +4,7 @@
 
 import unittest
 
-from yaml import serialize
+
 from models.rectangle import Rectangle
 
 
