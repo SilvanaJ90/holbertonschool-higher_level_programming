@@ -81,7 +81,8 @@ class TestRectangle(unittest.TestCase):
 
     """ Test of area() exists  """
     def test_rectangle_area(self):
-        self.assertIsNotNone(Rectangle.area)
+        r = Rectangle(2, 10)
+        self.assertEqual(r.area(), 20)
 
     """ Test of __str__() for Rectangle exists  """
 
