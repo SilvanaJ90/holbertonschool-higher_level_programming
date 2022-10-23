@@ -70,8 +70,14 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 0)
 
     """ Test of Rectangle(1, 2, -3) exists """
+    def test_rectangle_neg_s(self):
+            with self.assertRaises(ValueError):
+                r = Rectangle(1, 2, -3)
 
     """ Test of Rectangle(1, 2, 3, -4) exists """
+    def test_rectangle_neg_h(self):
+        with self.assertRaises(ValueError):
+            r = Rectangle(1, 2, 3, -4)
 
     """ Test of area() exists  """
 
