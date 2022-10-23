@@ -32,7 +32,7 @@ class TestRectangle(unittest.TestCase):
     """ Test of Rectangle(1, 2, "3") exists """
     def test_tectangle_str_tree(self):
         with self.assertRaises(TypeError):
-            r = Rectangle(1, 2, 3, "4")
+            r = Rectangle(1, 2, "3")
 
     """ Test of Rectangle(1, 2, 3, "4") exists """
     def test_tectangle_str_for(self):
@@ -40,7 +40,7 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, 2, 3, "4")
 
     """ Test of Rectangle(1, 2, 3, 4, 5) exists """
-    def test_tectangle_area(self):
+    def test_tectangle_five(self):
         r = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(r.width, 1)
         self.assertEqual(r.height, 2)
@@ -49,8 +49,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.id, 5)
 
     """ Test of Rectangle(-1, 2) exists """
+    def test_rectangle_neg(self):
+        with self.assertRaises(ValueError):
+            r = Rectangle(-1, 2)
+
 
     """ Test of Rectangle(1, -2) exists """
+    def test_rectangle_neg_(self):
+        with self.assertRaises(ValueError):
+            r = Rectangle(1, -2)
 
     """ Test of Rectangle(0, 2) exists """
 
