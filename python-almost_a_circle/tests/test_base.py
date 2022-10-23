@@ -35,9 +35,11 @@ class TestBase(unittest.TestCase):
         test = Base.to_json_string([{'id': 12}])
         self.assertEqual(test, '[{"id": 12}]')
 
-    """ Test of Base.to_json_string([ { 'id': 12 }]) returning a string """
-
     """ Test of Base.from_json_string(None) """
+    def test_base_from_json_string_none(self):
+        self.assertIsNotNone(Base.from_json_string)
+
+
 
     """ Test of Base.from_json_string("[]") """
 
