@@ -13,8 +13,9 @@ class TestRectangle(unittest.TestCase):
     
     """ Test of Rectangle(1, 2) exists """
     def test_rectangle(self):
-        r1 = Rectangle(10, 2)
-        self.assertEqual(r1.id, 1)
+        r = Rectangle(1, 2)
+        self.assertEqual(r.width, 1)
+        self.assertEqual(r.height, 2)
 
 
     """ Test of Rectangle(1, 2, 3) exists """
