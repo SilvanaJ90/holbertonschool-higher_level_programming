@@ -43,13 +43,5 @@ class TestBase(unittest.TestCase):
         self.assertEqual(test, [])
 
 
-
-    """ Test of Base.from_json_string("[]") """
-
-    """ Test of Base.from_json_string('[{ "id": 89 }]') """
-
-    """ Test of Base.from_json_string('[{ "id": 89 }]') returning a list """
-
-
 if __name__ == '__main__':
     unittest.main()
