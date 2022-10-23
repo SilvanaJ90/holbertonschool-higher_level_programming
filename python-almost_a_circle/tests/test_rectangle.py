@@ -25,6 +25,9 @@ class TestRectangle(unittest.TestCase):
 
 
     """ Test of Rectangle(1, "2") exists """
+    def test_tectangle_str_height(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, "2")
 
     """ Test of Rectangle(1, 2, "3") exists """
 
