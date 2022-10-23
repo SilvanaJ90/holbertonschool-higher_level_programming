@@ -30,8 +30,14 @@ class TestRectangle(unittest.TestCase):
             r = Rectangle(1, "2")
 
     """ Test of Rectangle(1, 2, "3") exists """
+    def test_tectangle_str_tree(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 2, 3, "4")
 
     """ Test of Rectangle(1, 2, 3, "4") exists """
+    def test_tectangle_str_for(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, 2, 3, "4")
 
     """ Test of Rectangle(1, 2, 3, 4, 5) exists """
 
