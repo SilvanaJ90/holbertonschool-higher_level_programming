@@ -135,7 +135,8 @@ class TestRectangle(unittest.TestCase):
 
     """ Test of Rectangle.save_to_file(None) in Rectangle exists """
     def test_rec_save_to_file(self):
-        self.assertIsNotNone(Base.save_to_file)
+        test = Base.save_to_file(None)
+        self.assertIsNone(test, [])
 
 
     """ Test of Rectangle.save_to_file([]) in Rectangle exists """
