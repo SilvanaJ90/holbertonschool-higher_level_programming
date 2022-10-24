@@ -122,6 +122,16 @@ class TestRectangle(unittest.TestCase):
 
    
     """ Test of Rectangle.create(**{ 'id': 89 }) in Rectangle exists """
+    def test_rec_create(self):
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dictionary)
+        self.assertEqual(r2.id, 5)
+        self.assertEqual(r2.width, 1)
+        self.assertEqual(r2.height, 2)
+        self.assertEqual(r2.x, 3)
+        self.assertEqual(r2.y, 4)
+
 
     """ Test of Rectangle.create(**{ 'id': 89, 'width': 1 }) in Rectangle exists """
 
