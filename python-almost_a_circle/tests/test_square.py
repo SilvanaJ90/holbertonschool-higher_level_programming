@@ -106,16 +106,18 @@ class TestSquare(unittest.TestCase):
     def test_square_save_none(self):
         Square.save_to_file(None)
 
-        with open("Square.json", "r") as file:
-            self.assertEqual("[]", file.read())
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
         os.remove('Square.json')
 
+    """ Test of Square.save_to_file([]) in Square exists """
     def test_square_save_to_file(self):
         Square.save_to_file([])
-        with open("Square.json", "r") as file:
-            self.assertEqual("[]", file.read())
+        with open("Square.json", "r") as f:
+            self.assertEqual("[]", f.read())
         os.remove('Square.json')
 
+    """ Test of Square.load_from_file() when file doesn’t exist exists """  
     def test_square_load(self):
         Square.save_to_file([])
         self.assertEqual(Square.load_from_file(), [])
