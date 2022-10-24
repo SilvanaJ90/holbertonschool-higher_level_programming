@@ -45,7 +45,7 @@ class TestSquare(unittest.TestCase):
     """ Test of Square(1, "2") exists """
     def test_square_error(self):
         with self.assertRaises(TypeError):
-            s = Square(1, 2, "3")
+            s = Square(1, "2")
 
     """ Test of Square(1, 2, "3") exists """
     def test_square_errorR(self):
@@ -53,6 +53,12 @@ class TestSquare(unittest.TestCase):
             s = Square(1, 2, "3")
 
     """ Test of Square(1, 2, 3, 4) exists """
+    def test_square_for(self):
+        s = Square(1, 2, 3, 4)
+        self.assertEqual(s.width, 1)
+        self.assertEqual(s.x, 2)
+        self.assertEqual(s.y, 3)
+        self.assertEqual(s.id, 4)
 
     """ Test of Square(-1) exists """
 
