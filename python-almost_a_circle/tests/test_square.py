@@ -116,6 +116,9 @@ class TestSquare(unittest.TestCase):
             self.assertEqual("[]", file.read())
         os.remove('Square.json')
 
+    def test_square_load(self):
+        Square.save_to_file([])
+        self.assertEqual(Square.load_from_file(), [])
 
 
 if __name__ == '__main__':
