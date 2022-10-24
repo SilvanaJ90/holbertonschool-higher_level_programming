@@ -105,8 +105,6 @@ class TestRectangle(unittest.TestCase):
     def test_rec_display(self):
         self.assertIsNotNone(Rectangle.display)
 
-
-
     """ Test of to_dictionary() in Rectangle exists  """
     def test_rec_dictionary(self):
         self.assertIsNotNone(Rectangle.to_dictionary)
@@ -116,6 +114,10 @@ class TestRectangle(unittest.TestCase):
         self.assertIsNotNone(Rectangle.update)
 
     """ Test of update(89) in Rectangle exists  """
+    def test_rec_upd_id(self):
+        r1 = Rectangle(10, 10, 10, 10)
+        r1.update(89)
+        self.assertEqual(r1.id, 89)
 
     """ Test of update(89, 1) in Rectangle exists  """
 
