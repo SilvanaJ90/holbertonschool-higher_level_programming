@@ -61,12 +61,24 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.id, 4)
 
     """ Test of Square(-1) exists """
+    def test_Raise_error(self):
+        with self.assertRaises(ValueError):
+            s = Square(-1)
 
     """ Test of Square(1, -2) exists """
+    def test_Square_Raise_Error(self):
+        with self.assertRaises(ValueError):
+            s = Square(1, -2)
 
     """ Test of Square(1, 2, -3) exists """
+    def test_square_error_r(self):
+        with self.assertRaises(ValueError):
+            Square(1, 2, -3)
     
     """ Test of Square(0) exists """
+    def test_square_zero(self):
+        with self.assertRaises(ValueError):
+            s = Square(0)
 
 
 
