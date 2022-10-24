@@ -94,24 +94,22 @@ class TestRectangle(unittest.TestCase):
     """ Test of display() without y exists  """
     def test_rectangle_display(self):
         r  = Rectangle(4, 2)
-        input_string = io.StringIO()
+        str_input = io.StringIO()
         result = "####\n####\n"
-        with redirect_stdout(input_string):
+        with redirect_stdout(str_input):
             r.display()
-        self.assertEqual(result, input_string.getvalue())
+        self.assertEqual(result, str_input.getvalue())
 
-
-    """ Test of display() exists  """
-    def test_rec_display(self):
-        self.assertIsNotNone(Rectangle.display)
-
+        r.x = 1
+        result = " ####\n ####\n"
+        str_input = io.StringIO()
+        with redirect_stdout(str_input):
+            r.display()
+        self.assertEqual(result, str_input.getvalue())
+        
     """ Test of to_dictionary() in Rectangle exists  """
     def test_rec_dictionary(self):
         self.assertIsNotNone(Rectangle.to_dictionary)
-
-    """ Test of update() in Rectangle exists  """
-    def test_rec_update(self):
-        self.assertIsNotNone(Rectangle.update)
 
     """ Test of update(89) in Rectangle exists  """
     def test_rec_upd_id(self):
@@ -119,24 +117,7 @@ class TestRectangle(unittest.TestCase):
         r1.update(89)
         self.assertEqual(r1.id, 89)
 
-    """ Test of update(89, 1) in Rectangle exists  """
-
-    """ Test of update(89, 1, 2) in Rectangle exists  """
-
-    """ Test of update(89, 1, 2, 3) in Rectangle exists """
-
-    """ Test of update(89, 1, 2, 3, 4) in Rectangle exists """
-
-    """ Test of update(**{ 'id': 89 }) in Rectangle exists """
-
-    """ Test of update(**{ 'id': 89, 'width': 1 }) in Rectangle exists """
-
-    """ Test of update(**{ 'id': 89, 'width': 1, 'height': 2 }) in Rectangle exists """
-
-    """ Test of update(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3 }) in Rectangle exists """
-
-    """ Test of update(**{ 'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4 }) in Rectangle exists """
-
+   
     """ Test of Rectangle.create(**{ 'id': 89 }) in Rectangle exists """
 
     """ Test of Rectangle.create(**{ 'id': 89, 'width': 1 }) in Rectangle exists """
