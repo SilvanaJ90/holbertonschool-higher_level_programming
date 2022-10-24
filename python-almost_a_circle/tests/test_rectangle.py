@@ -101,7 +101,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(result, input_string.getvalue())
 
 
+    """ Test of display() exists  """
+    def test_rec_display(self):
+        self.assertIsNotNone(Rectangle.display)
+
+
+
     """ Test of to_dictionary() in Rectangle exists  """
+    def test_rec_dictionary(self):
+        self.assertIsNotNone(Rectangle.to_dictionary)
 
     """ Test of update() in Rectangle exists  """
 
