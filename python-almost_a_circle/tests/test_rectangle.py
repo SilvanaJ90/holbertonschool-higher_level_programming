@@ -92,10 +92,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r, result)
 
     """ Test of display() without y exists  """
-
-
-
-    """ Test of display() exists  """
     def test_rectangle_display(self):
         r  = Rectangle(4, 2)
         input_string = io.StringIO()
@@ -104,6 +100,10 @@ class TestRectangle(unittest.TestCase):
             r.display()
         self.assertEqual(result, input_string.getvalue())
 
+
+    """ Test of display() exists  """
+    def test_rec_display(self):
+        self.assertIsNotNone(Rectangle.display)
 
 
 
