@@ -40,3 +40,4 @@ Projects:
 
 [0x11python-input_output](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x11python-input_output).
 
+[0x12-python-almost_a_circle](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x12-python-almost_a_circle).
