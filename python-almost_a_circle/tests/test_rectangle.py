@@ -5,6 +5,7 @@
 import unittest
 import io
 from contextlib import redirect_stdout
+from unittest import result
 
 from models.rectangle import Rectangle
 
@@ -106,10 +107,12 @@ class TestRectangle(unittest.TestCase):
         with redirect_stdout(str_input):
             r.display()
         self.assertEqual(result, str_input.getvalue())
-        
+
     """ Test of to_dictionary() in Rectangle exists  """
     def test_rec_dictionary(self):
-        self.assertIsNotNone(Rectangle.to_dictionary)
+        r1 = Rectangle(1, 2, 3, 4, 5).to_dictionary()
+        result = {'width': 1, 'height': 2, 'x': 3, 'y': 4, 'id': 5}
+        self.assertEqual(r1, result)
 
     """ Test of update(89) in Rectangle exists  """
     def test_rec_upd_id(self):
