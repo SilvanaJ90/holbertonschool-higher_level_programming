@@ -2,9 +2,11 @@
 """ Test Rectangle """
 
 
+from cgitb import reset
 import unittest
 import io
 from contextlib import redirect_stdout
+import json
 
 from models.base import Base
 
@@ -135,8 +137,14 @@ class TestRectangle(unittest.TestCase):
 
     """ Test of Rectangle.save_to_file(None) in Rectangle exists """
     def test_rec_save_to_file(self):
-        test = Rectangle.save_to_file(None)
-        self.assertIsNone(test, [])
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        with open("Rectangle.json", "r") as f:
+            ls = [r1.to_dictionary(), r2.to_dictionary()]
+            self.assertEqual(json.dumps(ls), f.read())
+
+
 
 
     """ Test of Rectangle.save_to_file([]) in Rectangle exists """
