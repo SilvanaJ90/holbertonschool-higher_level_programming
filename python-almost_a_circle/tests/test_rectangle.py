@@ -136,18 +136,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.y, 4)
 
     """ Test of Rectangle.save_to_file(None) in Rectangle exists """
-    def test_rec_save_to_file(self):
-        r1 = Rectangle(10, 7, 2, 8)
-        r2 = Rectangle(2, 4)
-        Rectangle.save_to_file([r1, r2])
-        with open("Rectangle.json", "r") as f:
-            ls = [r1.to_dictionary(), r2.to_dictionary()]
-            self.assertEqual(json.dumps(ls), f.read())
-
-
-
+    def test_rec_save_none(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual("[]", file.read())
 
     """ Test of Rectangle.save_to_file([]) in Rectangle exists """
+    def test_rec_save_to_file(self):
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual("[]", file.read())
 
     """ Test of Rectangle.save_to_file([Rectangle(1, 2)]) in Rectangle exists """
 
