@@ -81,6 +81,32 @@ class TestSquare(unittest.TestCase):
             s = Square(0)
 
 
+    """ Test of __str__() for Square exists """ 
+    def test_square_str(self):
+        s  = str(Square(1, 2, 3, 4))
+        result = '[Square] (4) 2/3 - 1'
+        self.assertEqual(s, result)
+
+    """ Test of to_dictionary() in Square exists """
+    def test_square_dictionary(self):
+        r1 = Square(1, 2, 3, 4).to_dictionary()
+        result = {'size': 1, 'x': 2, 'y': 3, 'id': 4}
+        self.assertEqual(r1, result)
+
+    """ Test of update() in Square exists """
+
+    """ Test of update(89) in Square exists """
+    def test_square_upd_id(self):
+        r1 = Square(10, 10, 10, 10)
+        r1.update(89)
+        self.assertEqual(r1.id, 89)
+
+    """ Test of update(89, 1) in Square exists """
+
+    """ Test of update(89, 1, 2) in Square exists """
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
