@@ -5,7 +5,8 @@
 import unittest
 import io
 from contextlib import redirect_stdout
-from unittest import result
+
+from models.base import Base
 
 from models.rectangle import Rectangle
 
@@ -133,6 +134,9 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.y, 4)
 
     """ Test of Rectangle.save_to_file(None) in Rectangle exists """
+    def test_rec_save_to_file(self):
+        self.assertIsNotNone(Base.save_to_file)
+
 
     """ Test of Rectangle.save_to_file([]) in Rectangle exists """
 
