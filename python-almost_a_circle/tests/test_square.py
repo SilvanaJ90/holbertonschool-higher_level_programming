@@ -101,9 +101,13 @@ class TestSquare(unittest.TestCase):
         r1.update(89)
         self.assertEqual(r1.id, 89)
 
-    """ Test of update(89, 1) in Square exists """
+    
 
-    """ Test of update(89, 1, 2) in Square exists """
+    """ Test of Square.create(**{ 'id': 89 }) in Square exists """
+    def test_square_create(self):
+        s1 = Square.create(**{'id': 89, 'size': 1})
+        self.assertEqual(s1.id, 89)
+        self.assertEqual(s1.width, 1)
 
 
 
