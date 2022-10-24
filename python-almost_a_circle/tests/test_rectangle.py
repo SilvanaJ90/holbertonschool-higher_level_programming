@@ -3,7 +3,8 @@
 
 
 import unittest
-
+import io
+from contextlib import redirect_stdout
 
 from models.rectangle import Rectangle
 
@@ -90,10 +91,21 @@ class TestRectangle(unittest.TestCase):
         result = '[Rectangle] (12) 2/1 - 4/6'
         self.assertEqual(r, result)
 
-
     """ Test of display() without y exists  """
 
+
+
     """ Test of display() exists  """
+    def test_rectangle_display(self):
+        r  = Rectangle(4, 2)
+        input_string = io.StringIO()
+        result = "####\n####\n"
+        with redirect_stdout(input_string):
+            r.display()
+        self.assertEqual(result, input_string.getvalue())
+
+
+
 
     """ Test of to_dictionary() in Rectangle exists  """
 
