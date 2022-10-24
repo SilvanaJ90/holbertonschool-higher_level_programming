@@ -106,8 +106,8 @@ class TestSquare(unittest.TestCase):
     def test_square_save_none(self):
         Square.save_to_file(None)
 
-        with open("Square.json", "r") as f:
-            self.assertEqual("[]", f.read())
+        with open('Square.json', 'r') as f:
+            self.assertEqual(f.read(), '[]')
         os.remove('Square.json')
 
     """ Test of Square.save_to_file([]) in Square exists """
