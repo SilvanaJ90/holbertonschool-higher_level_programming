@@ -112,6 +112,8 @@ class TestRectangle(unittest.TestCase):
         self.assertIsNotNone(Rectangle.to_dictionary)
 
     """ Test of update() in Rectangle exists  """
+    def test_rec_update(self):
+        self.assertIsNotNone(Rectangle.update)
 
     """ Test of update(89) in Rectangle exists  """
 
