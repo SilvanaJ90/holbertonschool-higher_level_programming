@@ -7,6 +7,7 @@ import unittest
 import io
 from contextlib import redirect_stdout
 import json
+import os
 
 from models.base import Base
 
@@ -104,9 +105,16 @@ class TestSquare(unittest.TestCase):
     """ Test of Square.save_to_file(None) in Square exists """
     def test_square_save_none(self):
         Square.save_to_file(None)
+
         with open("Square.json", "r") as file:
             self.assertEqual("[]", file.read())
+        os.remove('Square.json')
 
+    def test_square_save_to_file(self):
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual("[]", file.read())
+        os.remove('Square.json')
 
 
 
