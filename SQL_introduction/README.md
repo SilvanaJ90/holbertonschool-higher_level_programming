@@ -1,6 +1,6 @@
 # SQL - Introduction
 
-![image](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/272/rtcwz.jpg)
+![image](https://community-cdn-digitalocean-com.global.ssl.fastly.net/M1bswVs7zkuTaBacgsKxDCB4)
 
 
 ## Learning Objectives
