@@ -1,8 +1,8 @@
--- Write a script that creates the database hbtn_0d_usa and the table cities (in the database hbtn_0d_usa)
+-- Write a script that creates table cities
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS cities (
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
-    state_id INT NO NULL FOREIGN KEY (id) REFERENCES state(id),
+    state_id INT NOT NULL FOREIGN KEY (id) REFERENCES state(id),
     name VARCHAR(256) NOT NULL
     );
