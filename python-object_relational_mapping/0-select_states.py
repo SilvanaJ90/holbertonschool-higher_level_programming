@@ -16,7 +16,6 @@ def mysqlconnect():
     cursor = db.cursor()
 
     sql = "SELECT * FROM states ORDER BY states.id ASC"
-    """Create table as per requirement"""
  
     cursor.execute(sql)
 
@@ -25,7 +24,5 @@ def mysqlconnect():
         print(row)
 
     db.close()
-    """disconnect from server"""
- 
-""" Function Call For Connecting To Our Database"""
+
 mysqlconnect()
