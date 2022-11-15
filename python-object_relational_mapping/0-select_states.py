@@ -6,14 +6,18 @@ import MySQLdb
 def mysqlconnect():
 
     try:
-
-        db = MySQLdb.connect(host="localhost",user="root",password='',database="hbtn_0e_0_usa",port=3306)
         """Open database connection """ 
+        db = MySQLdb.connect(
+            host="localhost",
+            user="root",
+            password='',
+            database="hbtn_0e_0_usa",
+            port=3306
+            )
+        
     except:
         print("Can't connect to database")
         return 0
-    """If Connection Is Successful"""
-    print("Connected")
         
     cursor = db.cursor()
 
@@ -21,6 +25,10 @@ def mysqlconnect():
     """Create table as per requirement"""
  
     cursor.execute(sql)
+
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
 
     db.close()
     """disconnect from server"""
