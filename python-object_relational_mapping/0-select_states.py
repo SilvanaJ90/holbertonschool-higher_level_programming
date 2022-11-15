@@ -10,7 +10,7 @@ def mysqlconnect():
     db = MySQLdb.connect(
         host="localhost",
         user="root",
-        password='root',
+        password='',
         database="hbtn_0e_0_usa",
         port=3306
         )
