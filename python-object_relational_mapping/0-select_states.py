@@ -2,9 +2,9 @@
 import MySQLdb
 """ Write a script that lists all states from the database hbtn_0e_0_usa:  """
 
-""" Function for connecting to MySQL database"""
+
 def mysqlconnect():
-    """Open database connection """ 
+    """ Function for connecting to MySQL database""" 
     db = MySQLdb.connect(
         host="localhost",
         user="root",
