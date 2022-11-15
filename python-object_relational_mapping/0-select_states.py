@@ -4,7 +4,6 @@ import MySQLdb
 
 """ Function for connecting to MySQL database"""
 def mysqlconnect():
-
     """Open database connection """ 
     db = MySQLdb.connect(
         host="localhost",
