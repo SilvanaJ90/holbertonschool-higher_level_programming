@@ -5,5 +5,5 @@ LEFT JOIN tv_show_genres B
 ON A.id = B._show_id
 LEFT JOIN tv_genres C
 ON B.genre = C.id
-WHERE B.name = 'Comedy'
+WHERE C.name = 'Comedy'
 ORDER BY A.title ASC;
