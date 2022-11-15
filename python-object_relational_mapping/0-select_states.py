@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" Write a script that lists all states from the database hbtn_0e_0_usa:  """
+""" Write a script that lists all states from the database hbtn_0e_0_usa: """
 
 import MySQLdb
 
 
-
 def mysqlconnect():
     """ Function for connecting to MySQL database""" 
+    
     db = MySQLdb.connect(
         host="localhost",
         user="root",
@@ -27,4 +27,7 @@ def mysqlconnect():
 
     db.close()
 
-mysqlconnect()
+
+
+if __name__=="__main__":
+    mysqlconnect()
