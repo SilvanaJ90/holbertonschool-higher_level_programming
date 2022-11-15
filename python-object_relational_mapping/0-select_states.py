@@ -5,20 +5,15 @@ import MySQLdb
 """ Function for connecting to MySQL database"""
 def mysqlconnect():
 
-    try:
-        """Open database connection """ 
-        db = MySQLdb.connect(
-            host="localhost",
-            user="root",
-            password='root',
-            database="hbtn_0e_0_usa",
-            port=3306
-            )
-        
-    except:
-        print("Can't connect to database")
-        return 0
-        
+    """Open database connection """ 
+    db = MySQLdb.connect(
+        host="localhost",
+        user="root",
+        password='',
+        database="hbtn_0e_0_usa",
+        port=3306
+        )
+               
     cursor = db.cursor()
 
     sql = "SELECT * FROM states ORDER BY states.id ASC"
