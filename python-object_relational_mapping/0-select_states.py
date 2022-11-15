@@ -2,12 +2,14 @@
 import MySQLdb
 """ Write a script that lists all states from the database hbtn_0e_0_usa:  """
 
-""" Function for connecting to MySQL database"""
+
 def mysqlconnect():
+    """ Function for connecting to MySQL database"""
 
 
-    """Open database connection """ 
+   
     db = MySQLdb.connect(
+         """Open database connection """ 
         host="localhost",
         user="root",
         password='',
@@ -15,7 +17,6 @@ def mysqlconnect():
         port=3306
         )
 
-        
     cursor = db.cursor()
 
     sql = "SELECT * FROM states ORDER BY states.id ASC"
