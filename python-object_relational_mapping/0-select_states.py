@@ -2,6 +2,7 @@
 """ Write a script that lists all states from the database hbtn_0e_0_usa: """
 
 import MySQLdb
+from sys import argv
 
 
 def mysqlconnect():
@@ -9,9 +10,9 @@ def mysqlconnect():
     
     db = MySQLdb.connect(
         host="localhost",
-        user="root",
+        user=argv[1],
         password='',
-        database="hbtn_0e_0_usa",
+        database=argv[3],
         port=3306
         )
                
