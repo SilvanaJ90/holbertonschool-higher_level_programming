@@ -19,8 +19,6 @@ def mysqlconnect():
     except:
         print("Can't connect to database")
         return 0
-    """If Connection Is Successful"""
-    print("Connected")
 
     cursor = db.cursor()
 
