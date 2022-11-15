@@ -1,6 +1,6 @@
 -- Write a script that lists all shows contained
-SELECT tv_shows.title, tv_show_genres.genre_id
-FROM tv_show_genres
-RIGHT JOIN tv_shows 
-ON tv_shows.id = tv_show_genres.show_id
-ORDER BY tv_shows.title, tv_show_genres.genre_id ASC;
+SELECT B.title, A.genre_id
+FROM tv_show_genres A
+RIGHT JOIN tv_shows B
+ON B.id = A.show_id
+ORDER BY B.title, A.genre_id ASC;
