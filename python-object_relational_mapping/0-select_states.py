@@ -7,18 +7,13 @@ from sys import argv
 
 def mysqlconnect():
     """ Function for connecting to MySQL database"""
-
-    try:
-        db = MySQLdb.connect(
-            host="localhost",
-            user=argv[1],
-            password='',
-            database=argv[3],
-            port=3306
-            )
-    except:
-        print("Can't connect to database")
-        return 0
+    db = MySQLdb.connect(
+        host="localhost",
+        user=argv[1],
+        password='',
+        database=argv[3],
+        port=3306
+        )
 
     cursor = db.cursor()
 
