@@ -17,8 +17,7 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name LIKE 'N%' \
-        AND name NOT LIKE 'n%' ORDER BY states.id ASC;"
+    sql = "SELECT * FROM states WHERE name LIKE 'N%' AND name NOT LIKE 'n%' ORDER BY states.id ASC;"
 
     cursor.execute(sql)
 
