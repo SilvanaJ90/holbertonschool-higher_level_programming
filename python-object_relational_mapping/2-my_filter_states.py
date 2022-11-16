@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" 
-Write a script that takes in an argument 
+"""
+Write a script that takes in an argument
 and displays all values in the states table of
-hbtn_0e_0_usa where name matches the argument. 
+hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
@@ -21,7 +21,7 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name = '{}' \
+    sql = "SELECT * FROM states WHERE name = BINARY '{}' \
              ORDER BY states.id ASC".format(argv[4])
 
     cursor.execute(sql)
