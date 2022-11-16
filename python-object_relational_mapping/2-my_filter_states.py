@@ -21,7 +21,7 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name = 'Arizona' ORDER BY states.id ASC;"
+    sql = "SELECT * FROM states WHERE name = {} ORDER BY states.id ASC".format()
 
     cursor.execute(sql)
 
