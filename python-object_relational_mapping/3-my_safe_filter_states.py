@@ -21,7 +21,7 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name = BINARY '{}' \
+    sql = "SELECT * FROM states WHERE name = BINARY %s \
              ORDER BY states.id ASC".format(argv[4])
 
     cursor.execute(sql)
