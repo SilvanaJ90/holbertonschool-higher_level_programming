@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ 
-Write a script that lists all states with a name
-starting with N (upper N) from
-the database hbtn_0e_0_usa:
+Write a script that takes in an argument 
+and displays all values in the states table of
+hbtn_0e_0_usa where name matches the argument. 
 """
 
 import MySQLdb
@@ -21,8 +21,7 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name LIKE '(upper N)%' \
-            ORDER BY states.id ASC;"
+    sql = "SELECT * FROM states WHERE name = 'Arizona' ORDER BY states.id ASC;"
 
     cursor.execute(sql)
 
