@@ -7,6 +7,7 @@ hbtn_0e_0_usa where name matches the argument.
 
 import MySQLdb
 from sys import argv
+MySQLdb.escape_string("'")
 
 
 def mysqlconnect():
@@ -21,8 +22,8 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE \
-            name= %s ORDER BY states.id ASC",(argv[4],)
+    sql = "SELECT * FROM states WHERE name = BINARY '{}' \
+             ORDER BY states.id ASC".format(argv[4])
 
     cursor.execute(sql)
 
