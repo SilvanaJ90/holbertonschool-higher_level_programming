@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-Write a script that takes in an argument
-and displays all values in the states table of
-hbtn_0e_0_usa where name matches the argument.
+Write a script that lists 
+all cities from the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -25,7 +24,7 @@ def mysqlconnect():
             FROM states S \
             INNER JOIN cities C \
             ON S.id = C.state_id;"
-    
+
     cursor.execute(sql)
 
     rows = cursor.fetchall()
