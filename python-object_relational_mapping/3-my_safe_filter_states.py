@@ -21,14 +21,13 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = """SELECT * FROM states WHERE
-                name= %s ORDER BY id""", (argv[4],)
+    sql = "SELECT * FROM states WHERE name= '%s'", (argv[4],)
     
     cursor.execute(sql)
 
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    for col in rows:
+        print(col)
 
     db.close()
 
