@@ -24,7 +24,7 @@ def mysqlconnect():
             FROM cities C \
             LEFT JOIN states S \
             ON S.id = C.state_id; \
-            WHERE S.name = %s \
+            WHERE S.name = LIKE BINARY %s \
             ORDER BY C.id ASC",(argv[4],))
 
     rows = cursor.fetchall()
