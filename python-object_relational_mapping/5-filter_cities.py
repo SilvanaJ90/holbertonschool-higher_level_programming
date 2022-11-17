@@ -20,17 +20,19 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT C.id, C.name, S.name \
-            FROM states S \
-            INNER JOIN cities C \
+    cursor.execute("SELECT C.name \
+            FROM cities C \
+            LEFT JOIN states S \
             ON S.id = C.state_id; \
-            WHERE S.name = '{}' \
-            ORDER BY C.id ASC".format(argv[4]))
+            WHERE S.name = %s \
+            ORDER BY C.id ASC",(argv[4],))
 
     rows = cursor.fetchall()
+    cont = 0
+    lista = []
     for col in rows:
-        print(col)
-
+        lista.append(col[0])
+    print(", ".join(lista))
     db.close()
 
 
