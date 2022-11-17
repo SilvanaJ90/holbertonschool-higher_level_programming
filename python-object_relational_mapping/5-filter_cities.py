@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Write a script that takes in the name of a state as an argument
-and lists all cities of that state, using the database hbtn_0e_4_usa 
+Write a script that lists
+all cities from the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -20,8 +20,12 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT name FROM states WHERE name = %s \
-            ORDER BY states.id ASC", (argv[4], ))
+    cursor.execute("SELECT C.id, C.name, S.name \
+            FROM states S \
+            INNER JOIN cities C \
+            ON S.id = C.state_id; \
+            WHERE S.name = '{}' \
+            ORDER BY C.id ASC".format(argv[4]))
 
     rows = cursor.fetchall()
     for col in rows:
