@@ -20,16 +20,14 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT C.id, C.name, S.name \
+    cursor.execute("SELECT C.id, C.name, S.name \
             FROM states S \
             INNER JOIN cities C \
-            ON S.id = C.state_id;"
-
-    cursor.execute(sql)
+            ON S.id = C.state_id;")
 
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    for col in rows:
+        print(col)
 
     db.close()
 

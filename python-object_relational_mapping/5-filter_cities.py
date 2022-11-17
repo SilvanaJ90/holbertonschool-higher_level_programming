@@ -21,14 +21,12 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE name = BINARY '{}' \
-             ORDER BY states.id ASC".format(argv[4])
-
-    cursor.execute(sql)
+    cursor.execute("SELECT * FROM states WHERE name = BINARY '{}' \
+             ORDER BY states.id ASC".format(argv[4]))
 
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    for col in rows:
+        print(col)
 
     db.close()
 

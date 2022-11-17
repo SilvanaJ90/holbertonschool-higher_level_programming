@@ -21,8 +21,7 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    cursor.execute(
-            "SELECT * FROM states WHERE name = %s ORDER BY states.id ASC",
+    cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC",
             (argv[4], ))
 
     rows = cursor.fetchall()
