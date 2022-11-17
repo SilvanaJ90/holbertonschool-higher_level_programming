@@ -2,10 +2,11 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 
-"""Doc"""
+
 Base = declarative_base()
+""" definition of a State and an instance Base = declarative_base(): """
 class State(Base):
-    """Doc"""
+    """ class state inherits from Base """
     __tablename__ = 'state'
     id = Column(Integer, autoincrement=True,
              unique=True, nullable=False, 
