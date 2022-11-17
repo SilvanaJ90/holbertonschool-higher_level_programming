@@ -20,19 +20,16 @@ def mysqlconnect():
 
     cursor = db.cursor()
 
-    cursor.execute("SELECT C.name \
-            FROM cities C \
-            LEFT JOIN states S \
-            ON S.id = C.state_id; \
-            WHERE S.name = LIKE BINARY %s \
-            ORDER BY C.id ASC",(argv[4],))
+    cursor.execute("SELECT C.name FROM cities C \
+                LEFT JOIN states S ON C.state_id = S.id \
+                WHERE S.name LIKE BINARY %s \
+                ORDER BY C.id ASC", (argv[4],))
 
     rows = cursor.fetchall()
-    cont = 0
-    lista = []
+    list = []
     for col in rows:
-        lista.append(col[0])
-    print(", ".join(lista))
+        list.append(col[0])
+    print(", ".join(list))
     db.close()
 
 
