@@ -24,7 +24,7 @@ if __name__ == "__main__":
     try:
         state = session.query(State).filter(State.id).first()
         print("{}: {}".format(state.id, state.name))
-    
+
     except:
         if not state:
             print('Nothing')
