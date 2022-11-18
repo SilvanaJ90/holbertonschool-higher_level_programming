@@ -21,12 +21,11 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    try:
-        state = session.query(State).filter(State.id).first()
+    state = session.query(State).filter(State.id).first()
+    if state:
         print("{}: {}".format(state.id, state.name))
 
-    except (FileNotFoundError):
-        if not state:
-            print('Nothing')
+    else:
+        print('Nothing')
 
     session.close()
