@@ -21,10 +21,12 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    state = session.query(State).filter(State.id).first()
-    print("{}: {}".format(state.id, state.name))
-
-    if not state:
-        print('Nothing')
+    try:
+        state = session.query(State).filter(State.id).first()
+        print("{}: {}".format(state.id, state.name))
+    
+    except:
+        if not state:
+            print('Nothing')
 
     session.close()
