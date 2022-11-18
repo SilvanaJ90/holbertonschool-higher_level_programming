@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    for state in session.query(State).limit(1).all():
-        print("{}: {}".format(state.id, state.name))
+    state = session.query(State).filter(State.id).first()
+    print("{}: {}".format(state.id, state.name))
 
     session.close()
