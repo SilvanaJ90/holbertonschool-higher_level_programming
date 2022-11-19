@@ -6,6 +6,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session
+from sqlalchemy import update
 
 
 if __name__ == "__main__":
@@ -21,8 +22,7 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    for state in session.query(State).order_by(
-                            State.id).filter(State.name.like('%a%')).all():
-        print("{}: {}".format(state.id, state.name))
+    session.query(State).filter(State.name.like('%a%')).delete(synchronize_session="fetch")
+    session.commit()
 
     session.close()
