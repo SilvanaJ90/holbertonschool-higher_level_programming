@@ -22,7 +22,8 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    session.query(State).filter(State.name.like('%a%')).delete(synchronize_session="fetch")
+    session.query(State).filter(State.name.like('%a%')).delete(
+            synchronize_session="fetch")
     session.commit()
 
     session.close()
