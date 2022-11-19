@@ -6,13 +6,10 @@ from sqlalchemy.orm import relationship
 from model_state import Base, State
 
 
-Base = declarative_base()
-""" definition of a city and an instance Base = declarative_base(): """
-
-
 class City(Base):
-    """ class city inherits from Base """
-    __tablename__ = 'city'
+    """ Class City inherith from Base
+    Implement model cities """
+    __tablename__ = 'cities'
     id = Column(Integer, autoincrement=True,
                 unique=True, nullable=False,
                 primary_key=True)
