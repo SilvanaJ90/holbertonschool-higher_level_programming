@@ -6,7 +6,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session
-from sqlalchemy import insert
+from sqlalchemy import update
 
 
 if __name__ == "__main__":
@@ -22,9 +22,10 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    new_state = State(name="Louisiana")
-    session.add(new_state)
-    session.commit()
-    print(new_state.id)
+    update_state = session.query(State).filter(State.id==2).update({"name": "New Mexico"}, synchronize_session="fetch")
 
+    update = session.query(State).filter(State.id == 2).update(
+        {"name": "New Mexico"}, synchronize_session="fetch"
+    )
+    session.execute(update)
     session.close()
