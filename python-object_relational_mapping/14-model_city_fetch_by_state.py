@@ -4,8 +4,10 @@ Start link class to table in database
 """
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import create_engine, MetaData
 from sqlalchemy.orm import Session
+from sqlalchemy import asc
 
 
 if __name__ == "__main__":
@@ -19,10 +21,8 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    Base.metadata.create_all(engine)
-
-    for state in session.query(State).order_by(
-                            State.id).filter(State.name.like('%a%')).all():
-        print("{}: {}".format(state.id, state.name))
+    for state, city in session.query(State, City).join(
+        State).order_by(asc(City.id)).all():
+            print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
