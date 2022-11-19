@@ -22,7 +22,7 @@ if __name__ == "__main__":
     session = Session(engine)
 
     for state, city in session.query(State, City).join(
-        State).order_by(asc(City.id)).all():
-            print("{}: ({}) {}".format(state.name, city.id, city.name))
+                    State).order_by(asc(City.id)).all():
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
