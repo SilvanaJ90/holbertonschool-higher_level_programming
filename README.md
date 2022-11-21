@@ -41,3 +41,10 @@ Projects:
 [0x11python-input_output](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x11python-input_output).
 
 [0x12-python-almost_a_circle](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x12-python-almost_a_circle).
+
+[0x13-SQL_introduction](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x13-SQL_introduction).
+
+[0x14-SQL_more_queries](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x14-SQL_more_queries).
+
+[0x15-python-object_relational_mapping](https://github.com/SilvanaJ90/holbertonschool-higher_level_programming/tree/master/0x15-python-object_relational_mapping).
+
