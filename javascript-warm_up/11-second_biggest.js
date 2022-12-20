@@ -1,20 +1,14 @@
 #!/usr/bin/node
 
-function nextBiggest(arr) {
-  let max = -Infinity, result = -Infinity;
+const len = process.argv.length - 2;
+const array = process.argv.slice(2);
 
-  for (const value of arr) {
-    const nr = Number(value)
-
-    if (nr > max) {
-      [result, max] = [max, nr] // save previous max
-    } else if (nr < max && nr > result) {
-      result = nr; // new second biggest
-    }
-  }
-
-  return result;
+if (len < 2 || isNaN(len)) {
+  console.log(0);
+} else {
+  array.sort(num);
+  console.log(array[len - 2]);
 }
-
-const arr = process.argv;
-console.log(nextBiggest(arr));
+function num (a, b) {
+  return a - b;
+}
