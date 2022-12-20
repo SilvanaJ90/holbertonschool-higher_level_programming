@@ -1,5 +1,7 @@
 #!/usr/bin/node
+function myFunction(a) {
+    console.log(a);
+}
 
-const myVar = 'JavaScript is amazing';
-
-console.log(myVar);
+const number = 12;
+myFunction(number);
