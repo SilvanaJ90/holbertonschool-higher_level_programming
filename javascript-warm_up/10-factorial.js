@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const num = parseInt(process.argv[2])
+const num = parseInt(process.argv[2]);
 
 function factorialize (num) {
   if (num === 1 || isNaN(num)) {
