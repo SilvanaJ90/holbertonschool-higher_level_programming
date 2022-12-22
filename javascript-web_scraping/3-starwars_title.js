@@ -8,5 +8,5 @@ request.get(url_sw, process.argv[2],
     if (err) {
       return;
     }
-    return console.log(JSON.parse(body).title);
+    console.log(JSON.parse(body).title);
 });
