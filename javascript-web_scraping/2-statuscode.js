@@ -2,9 +2,9 @@
 
 const request = require('request');
 
-request.get(process.argv[2], function (error, response) {
-  if (!error && response.statusCode == 200) {
-    console.log('code: ', response.statusCode);
+request.get(process.argv[2], function (err, response) {
+  if (err) {
+    return;
   }
-  return;
+  console.log('code: ', response.statusCode);
 });
