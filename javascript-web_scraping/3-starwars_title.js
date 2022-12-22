@@ -3,7 +3,7 @@
 const request = require('request');
 url_sw = 'https://swapi-api.hbtn.io/api/films/';
 
-request.get(url_sw + process.argv[2], (err, body) => { 
+request.get(url_sw + process.argv[2], function (err, body) { 
   if (err) {
    console.log(err)
   } else {
