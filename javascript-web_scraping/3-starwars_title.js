@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
 const request = require('request');
-url_s = 'https://swapi-api.hbtn.io/api/films/';
-args = process.argv[2]
+const url = 'https://swapi-api.hbtn.io/api/films/';
+const moveId = process.argv[2];
 
-request.get(url_s + args, function (err, cosa, body) {
+request.get(url + moveId, function (err, res, body) {
   if (err) {
-    console.log(err)
+    console.log(err);
   } else {
     console.log(JSON.parse(body).title);
   }
