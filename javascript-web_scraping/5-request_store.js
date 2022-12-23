@@ -10,5 +10,5 @@ request.get(url, function (err, res, body) {
     if (err) {
       console.log(err);
     }
-  })
+  });
 });
