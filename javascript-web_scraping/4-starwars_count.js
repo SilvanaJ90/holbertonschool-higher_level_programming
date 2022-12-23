@@ -2,12 +2,18 @@
 
 const request = require('request');
 const url = process.argv[2];
-const moveId = 'https://swapi-api.hbtn.io/api/people/18';
 
 request.get(url, function (err, res, body) {
-  if (moveId) {
-    count++
-  return count
+  if (err) {
+    console.log(err);
   }
+  let count = 0;
+  for (const result of JSON.parse(body).results) {
+    for (const wedgeUrl of result.characters) {
+      if (wedgeUrl.includes(18)) {
+        count++;
+      }
+    }
+  }
+  console.log(count);
 });
-console.log(count);
